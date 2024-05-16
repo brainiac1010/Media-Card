@@ -12,7 +12,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #212121;
-    height: 100vh; 
+    height: 100vh;
     margin: 0;
 }
 
@@ -21,6 +21,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .glass {
@@ -28,8 +29,8 @@ body {
     width: 180px;
     height: 200px;
     background: linear-gradient(#fff2, transparent);
-    border: 2px solid rgba(255, 255, 255, 0.1); /* Fixed rgba issue */
-    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25); /* Fixed rgba issue */
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,4 +62,23 @@ body {
 .container:hover .glass {
     transform: rotate(0);
     margin: 0 10px;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .glass {
+        margin: 20px 0;
+        width: 150px;
+        height: 170px;
+        font-size: 24px;
+    }
+
+    .glass::before {
+        height: 30px;
+        font-size: 14px;
+    }
 }
