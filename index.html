@@ -21,6 +21,17 @@
             <i class="bi bi-twitter"></i>
         </a>
     </div>
+
+    <script>
+
+        document.querySelectorAll('.glass').forEach(glass => {
+            glass.addEventListener('click', function () {
+                document.querySelectorAll('.glass').forEach(item => item.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+    </script>
 </body>
 
 </html>
