@@ -39,6 +39,8 @@ body {
     margin: 0 -45px;
     backdrop-filter: blur(10px);
     transform: rotate(calc(var(--i) * 1deg));
+    text-decoration: none;
+    color: #fff;
 }
 
 .glass {
