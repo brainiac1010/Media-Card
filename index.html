@@ -23,12 +23,11 @@
     </div>
 
     <script>
-
-        document.querySelectorAll('.glass').forEach(glass => {
-            glass.addEventListener('click', function () {
+    document.querySelector('.container').addEventListener('click', function (event) {
+            if (event.target.classList.contains('glass')) {
                 document.querySelectorAll('.glass').forEach(item => item.classList.remove('active'));
-                this.classList.add('active');
-            });
+                event.target.classList.add('active');
+            }
         });
 
     </script>
