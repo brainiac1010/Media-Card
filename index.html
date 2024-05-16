@@ -23,13 +23,19 @@
     </div>
 
     <script>
-    document.querySelector('.container').addEventListener('click', function (event) {
-            if (event.target.classList.contains('glass')) {
+        document.querySelector('.container').addEventListener('click', function(event) {
+            if (event.target.closest('.glass')) {
                 document.querySelectorAll('.glass').forEach(item => item.classList.remove('active'));
-                event.target.classList.add('active');
+                event.target.closest('.glass').classList.add('active');
             }
         });
 
+        document.querySelectorAll('.glass').forEach(glass => {
+            glass.addEventListener('mouseover', function() {
+                document.querySelectorAll('.glass').forEach(item => item.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
     </script>
 </body>
 
